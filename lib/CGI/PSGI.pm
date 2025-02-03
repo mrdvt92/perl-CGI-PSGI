@@ -61,7 +61,7 @@ sub read_from_stdin {
     return $res;
 }
 
-# copied and rearranged from CGI::header
+# copied and rearanged from CGI::header
 sub psgi_header {
     my($self, @p) = @_;
 
@@ -237,7 +237,7 @@ CGI::PSGI - Adapt CGI.pm to the PSGI protocol
   my $app = sub {
       my $env = shift;
       my $q = CGI::PSGI->new($env);
-      return [ $q->psgi_header, [ $body ] ];
+      return [ $q->psgi_header, [ body() ] ];
   };
 
 =head1 DESCRIPTION
